@@ -10,6 +10,44 @@ entries:
           description: Set the deployment strategy to RollingUpdate, which should have been the default all along.
     apiVersion: v2
     appVersion: v1.120.0
+    created: "2025-03-13T15:03:13.23998483Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 1.4.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.3
+    description: A chart to power Immich (immich.app) running on kubernetes
+    digest: e91743f663c5f209fc89363595479149dcce7b3ff15d61304d77f21788fbb65c
+    home: https://immich.app/
+    icon: https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg
+    maintainers:
+    - email: 5434875+PixelJonas@users.noreply.github.com
+      name: PixelJonas
+    - email: immich@bo0tzz.me
+      name: bo0tzz
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich-charts/tree/main/charts/immich
+    - https://github.com/immich-app/immich
+    urls:
+    - https://github.com/daftu/immich-charts/releases/download/immich-0.9.6/immich-0.9.6.tgz
+    version: 0.9.6
+  - annotations:
+      artifacthub.io/category: storage
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Proper generated changelogs on GitHub
+        - kind: fixed
+          description: Set the deployment strategy to RollingUpdate, which should have been the default all along.
+    apiVersion: v2
+    appVersion: v1.120.0
     created: "2025-03-13T14:54:54.838528128Z"
     dependencies:
     - name: common
@@ -191,4 +229,4 @@ entries:
     urls:
     - https://github.com/daftu/immich-charts/releases/download/immich-0.9.1/immich-0.9.1.tgz
     version: 0.9.1
-generated: "2025-03-13T14:54:54.838546132Z"
+generated: "2025-03-13T15:03:13.240004868Z"
